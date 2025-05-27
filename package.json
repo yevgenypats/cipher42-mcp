@@ -1,0 +1,37 @@
+{
+  "name": "@yevgenyp/cipher42-mcp",
+  "version": "0.0.7",
+  "bin": "build/server.js",
+  "scripts": {
+    "build": "tsc && chmod 755 build/server.js",
+    "dev": "nodemon --exec 'ts-node --transpile-only --files' src/server.ts",
+    "generate:api": "rm -rf src/http-schemas && orval --config orval.config.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yevgenypats/cipher42-mcp.git"
+  },
+  "keywords": [],
+  "author": "Yevgeny Pats",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yevgenypats/cipher42-mcp/issues"
+  },
+  "homepage": "https://github.com/yevgenypats/cipher42-mcp#readme",
+  "description": "Cipher42.AI MCP Server",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "orval": "^7.9.0",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
